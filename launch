@@ -1,2 +1,4 @@
-sudo java -Dprism.verbose=true -cp /home/pi/fxrocket/libs/jfxrt.jar:/home/pi/fxrocket/out/production/fxrocket fxrocket.Start
+cd /home/pi/fxrocket
+git pull
+sudo java -Dprism.verbose=true -cp /home/pi/fxrocket/libs/jfxrt.jar:/home/pi/fxrocket/target/classes fxrocket.Start
 

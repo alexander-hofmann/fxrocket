@@ -1,0 +1,4 @@
+19.05.2017
+
+The project's Maven dependencies do not update properly on their own.
+After changing the project's maven dependencies you need to delete the entire deployment folder (~/IdeaProjects/fxrocket/) in order to get the changes onto the Raspberry Pi.

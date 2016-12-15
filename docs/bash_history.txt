@@ -1,14 +1,23 @@
 09.12.2016
+
+https://github.com/alexander-hofmann/fxrocket.git
+
 sudo echo "lcd_rotate=2" >> /boot/config.txt
 sudo cp -R ~/fxrocket/jdk/* /usr/lib/jvm/jdk-8-oracle-arm32-vfp-hflt/
 
+sudo apt-get install xscreensaver 
+preferences->screensaver->disable screensaver
 
-in sudo nano /etc/kbd/config
-	BLANK_TIME=0
-	POWERDOWN_TIME=0
-sudo nano /etc/xdg/lxsession/LXDE/autostart
-	@xset s noblank 
-	@xset s off
-	@xset -dpms
+------ Splashscreen -----
+apt-get install fbi
 
+Copy your custom splash image to /etc/ and name it "fxrocket.png".
 
+Next, create an init.d script called "asplashscreen" in "/etc/init.d/".
+
+I chose "asplashscreen" with an "a" at the beginning to be sure it starts first.
+
+sudo cp ~/fxrocket/etc/init.d/afxrocket /etc/init.d/. 
+sudo chmod u+x /etc/init.d/afxrocket
+sudo insserv /etc/init.d/afxrocket
+sudo cp ~/fxrocket/media/fxrocket.png /etc/.
